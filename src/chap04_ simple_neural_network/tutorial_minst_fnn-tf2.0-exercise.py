@@ -163,8 +163,8 @@ for epoch in range(50):
 # 在测试集上评估模型性能
 loss, accuracy = test(
     model,
-    tf.constant(test_data[0], dtype=tf.float32),
-    tf.constant(test_data[1], dtype=tf.int64)
+    tf.constant(test_data[0], dtype=tf.float32), # 将测试特征数据转换为float32类型的Tensor
+    tf.constant(test_data[1], dtype=tf.int64)    # 将测试标签数据转换为int64类型的Tensor
 )
 
 print('test loss', loss.numpy(), '; accuracy', accuracy.numpy())
