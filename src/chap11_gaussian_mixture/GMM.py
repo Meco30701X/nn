@@ -212,11 +212,11 @@ class GaussianMixtureModel:
         if not self.log_likelihoods:
            raise ValueError("请先调用fit方法训练模型")
         
-        plt.figure(figsize=(10, 6))
+        plt.figure(figsize=(10, 6)) # 创建一个图形窗口，设置图形大小为 10x6 英寸
         plt.plot(range(1, len(self.log_likelihoods) + 1), self.log_likelihoods, 'b-')
-        plt.xlabel('迭代次数')
-        plt.ylabel('对数似然值')
-        plt.title('EM算法收敛曲线')
+        plt.xlabel('迭代次数') # 设置 x 轴标签为 "迭代次数"
+        plt.ylabel('对数似然值') # 设置 y 轴标签为 "对数似然值"
+        plt.title('EM算法收敛曲线') # 设置图形标题为 "EM算法收敛曲线"
         # 启用网格线（增强图表可读性，便于查看数据点位置）
 # 可选参数：linestyle='--'（虚线）, alpha=0.5（透明度）等
         plt.grid(True)
